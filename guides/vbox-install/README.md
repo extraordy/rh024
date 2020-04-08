@@ -78,7 +78,7 @@ Cliccate [qui](README-noimg.md) per una versione di questo documento priva di im
 
 ## 3. Importare la macchina virtuale
 
-Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
+Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](https://drive.google.com/drive/folders/1c4IuzkvrNeV_sK_EpQOL70isygrPNdc1?usp=sharing); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
 
 - Una volta scaricato il file, apritelo in VirtualBox (se avete seguito la procedura di installazione proposta, basterà un doppio click):
 
