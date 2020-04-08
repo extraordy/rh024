@@ -262,7 +262,7 @@ Creare una directory "rh024-permissions" ed assegnargli i seguenti permessi:
  - Gruppo proprietario: Lettura, Attraversamento   
  - Altri: Nessun permesso   
    
-Creare all'interno della directory tre file, file1, file2 e file3 e modificare i permessi della directory e del suo contenuto in questo modo:   
+Creare all'interno della directory tre files, file1, file2 e file3 e modificare i permessi della directory e del suo contenuto in questo modo:   
    
  - Utente proprietario: Lettura, Scrittura, Attraversamento   
  - Gruppo proprietario: Lettura   

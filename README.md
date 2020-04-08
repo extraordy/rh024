@@ -2,6 +2,8 @@
 
 Il Red Hat Enterprise Linux Technical Overview (RH024) basato su RHEL8, affronta le pratiche di base per l'utilizzo di Linux e le attività di amministrazione del sistema.
 
+By EXTRAORDY - La formazione ufficiale Red Hat
+
 # Setup consigliato
 
 E' consigliato seguire le guide per l'iscrizione gratuita a Red Hat Developer e per la creazione di una macchina virtuale con Kvm o VirtualBox.
