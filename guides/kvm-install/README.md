@@ -2,6 +2,13 @@
 
 La seguente procedura è stata testata Fedora 31, ma dovrebbe essere valida per qualunque distribuzione GNU/Linux con i dovuti accorgimenti.
 
+#### Credenziali di accesso per la macchina virtuale
+
+| nome utente | password | ruolo |
+|-|-|-|
+| student | student | utente normale |
+| root | redhat | amministratore |
+
 ## 1. Download
 
 - Aprire un terminale ed effettuare il login con un utente che abbia i premessi di amministratore;
@@ -20,6 +27,8 @@ La seguente procedura è stata testata Fedora 31, ma dovrebbe essere valida per 
 ```bash
 wget "https://drive.google.com/open?id=19id0zA-XKeTF_3_jm0taFeFhxNmcDo_N" -O rh024.tar.gz
 ```
+
+**NOTA**: Il comando riportato sopra non permette di scaricare il file: al momento stiamo lavorando per inserire nella guida una soluzione, nel frattempo potete seguire il [link](https://drive.google.com/open?id=19id0zA-XKeTF_3_jm0taFeFhxNmcDo_N) proposto sopra, oppure provare quanto consigliato [qui](https://github.com/extraordy/rh024/issues/6)
 
 ## 2. Installazione
 
