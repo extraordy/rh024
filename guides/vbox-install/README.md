@@ -2,11 +2,9 @@
 
 La seguente procedura è stata testata su Windows 10 build 1909, ma dovrebbe essere valida per qualunque versione di Windows, con i dovuti accorgimenti.
 
-Cliccate [qui](README-noimg.md) per una versione di questo documento priva di immagini.
-
 ## 1. Download
 
-- Scaricare la versione 6.1.4 di VirtualBox da [questo](https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe) link (si tratta del sito ufficiale *virtualbox.org*); a seconda del browser utilizzate, seguire le indicazioni relative:
+- Scaricare la versione 6.1.4 di VirtualBox da [questo](https://download.virtualbox.org/virtualbox/6.1.4/VirtualBox-6.1.4-136177-Win.exe) link (si tratta del sito ufficiale *virtualbox.org*); a seconda del browser utilizzato, seguite le indicazioni relative:
     * ### Chrome:
         - All'apertura del link il download inizierà automaticamente, e il seguente indicatore verrà mostrato in basso a sinistra della finestra del browser
 
@@ -78,7 +76,7 @@ Cliccate [qui](README-noimg.md) per una versione di questo documento priva di im
 
 ## 3. Importare la macchina virtuale
 
-Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](https://drive.google.com/drive/folders/1c4IuzkvrNeV_sK_EpQOL70isygrPNdc1?usp=sharing); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
+Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](https://drive.google.com/open?id=1X9mrJNZOcylqlMIvi9coMdOstopwKI8Z); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
 
 - Una volta scaricato il file, apritelo in VirtualBox (se avete seguito la procedura di installazione proposta, basterà un doppio click):
 
