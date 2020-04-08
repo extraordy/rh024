@@ -1,4 +1,6 @@
-Il networking è gestito da servizio NetworkManager. Per inferfacciarci con questo servizio abbiamo due opzioni: la la Graphical User Interface (GUI) o la Command Line Interface (CLI). Noi andremo a introdurre l'utility 'nmcli' che ci permette di configurare device di rete e connessioni dalla linea di comando.
+# Fondamenti di networking
+
+Il networking è gestito dal servizio NetworkManager. Per inferfacciarci con questo servizio abbiamo due opzioni: la la Graphical User Interface (GUI) o la Command Line Interface (CLI). Noi andremo a introdurre l'utility 'nmcli' che ci permette di configurare device di rete e connessioni dalla linea di comando.
 
 NetworkManager effettua il management delle connessioni utilizzando i profili. I profili creano un identificativo unifico chiamato UUID e lo associano al nome della connessione. Se per esempio creiamo due connessioni con lo stesso nome esse avranno gli UUID diversi e quindi saranno univocalmente identificabili.
 

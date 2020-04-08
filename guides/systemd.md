@@ -1,3 +1,5 @@
+# Fondamenti di systemd
+
 Systemd fornisce un demone di registrazione e altri strumenti e utilità per facilitare le attività di amministrazione del sistema comuni.
 Systemd è un sistema di inizializzazione di Linux e un gestore di servizi che include funzionalità come l'avvio su richiesta di daemon, manutenzione dei punti di mount e mount automatico, supporto di snapshot e tracciamento dei processi tramite i gruppi di controllo Linux. 
 
