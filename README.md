@@ -9,6 +9,7 @@ E' consigliato seguire le guide per l'iscrizione gratuita a Red Hat Developer e 
 - [Guida inscrizione gratuita a Red Hat Developer](guides/rhdev-subscribe/README.md)
 - [Guida installazione kvm](guides/kvm-install/README.md)
 - [Guida installazione virtualbox](guides/vbox-install/README.md)
+- [Guida installazione GNOME Boxes](guides/boxes-install/README.md)
 
 Nel caso non fosse possibile installare il software necessario per qualunque motivo, non preoccuparti. 
 Puoi seguire comunque le lezioni dei nostri istruttori. 
