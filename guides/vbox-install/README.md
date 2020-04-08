@@ -98,3 +98,27 @@ A questo [link](https://youtu.be/CY9y-l410AQ) si trova lo screencast che illustr
 - Attendere che l'importazione sia terminata, a questo punto la macchina virtuale sarà disponibile come una voce nell'elenco della finestra di VirtualBox:
 
 ![import-03](img/import-ova-03.PNG)
+
+### Problema DNS durante registrazione della sottoscrizione
+
+Se la vostra macchina è collegata attraverso una rete VPN, potreste incontrare dei [problemi](https://github.com/extraordy/rh024/issues/8) DNS nella fase di registrazione del sistema con la sottoscrizione Red Hat Developer; in questo caso, potete provare ad effettuare le seguenti operazioni:
+
+- Per prima cosa arrestate la macchina virtuale "RH024", se in esecuzione;
+
+- Aprite il menù start, cercate l'applicazione "Esegui" e avviatela:
+
+![dns-01](img/vbox-dns-01.PNG)
+
+- Scrivete `cmd.exe` nella casella di testo e cliccate il bottone "Ok":
+
+![dns-02](img/vbox-dns-02.PNG)
+
+- Incollate il seguente comando nella finestra del temrmilane, e premete Invio:
+
+```ps
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm RH024 --natdnshostresolver1 on
+```
+
+![dns-03](img/vbox-dns-03.PNG)
+
+- Avviate la macchina virtuale RH024 e provate ad effettuare la registrazione, come descritto al [passo 4](../rhdev-subscribe/README.md/#4-attivazione-della-sottoscrizione) della guida alla sottoscrizione.
