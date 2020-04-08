@@ -10,6 +10,7 @@ E' consigliato seguire le guide per l'iscrizione gratuita a Red Hat Developer e 
 - [Guida installazione kvm](guides/kvm-install/README.md)
 - [Guida installazione virtualbox](guides/vbox-install/README.md)
 
+Nel caso non fosse possibile installare il software necessario per qualunque motivo, non preoccuparti. 
+Puoi seguire comunque le lezioni dei nostri istruttori. 
 
-
-
+Le macchine virtuali **non sono indispensabili** per seguire il corso erogato.
