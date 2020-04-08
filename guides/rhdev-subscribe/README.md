@@ -134,7 +134,9 @@ Allora non ci sono sottoscrizioni associate al proprio account; questo potrebbe 
 
 ---
 
-- In caso di errore, provare ad eseguire i seguenti comandi, poi riprovare dai comandi mostrati dopo la schermata di login:
+### Errori con subscription-manager
+
+In caso di errore, provare ad eseguire i seguenti comandi, poi riprovare dai comandi mostrati dopo la schermata di login:
 
 ```bash
 subscription-manager remove --all
