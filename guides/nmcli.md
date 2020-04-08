@@ -374,7 +374,7 @@ Soluzione:
 nmcli connection add con-name home ifname eth0 type ethernet ipv4.method manual ipv4.address 172.20.1.2/24 ipv4.dns 8.8.8.8 ipv4.gateway 172.20.1.1
 ```
 
-Creare una connessione e relativi parametri con solo step è possibile grazie a `nmcli connection add`; 
+Creare una connessione e relativi parametri con un solo step è possibile grazie a `nmcli connection add` 
 
 
 
