@@ -83,7 +83,7 @@ La seguente procedura è stata testata su Windows 10 build 1909, ma dovrebbe ess
 
 ## 3. Importare la macchina virtuale
 
-Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](https://drive.google.com/open?id=1X9mrJNZOcylqlMIvi9coMdOstopwKI8Z); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
+Il file che contiene tutto il necessario per utilizzare la macchina virtuale proposta (chiamato `RH024.ova`) è disponibile al seguente [link](https://drive.google.com/open?id=1OU2rsSPBxk4V6KamomSOX8PbqVETy--y); dopo aver cliccato il link, fate riferimento al [passo 1](#1-download) per quanto riguarda il download e l'apertura del file.
 
 A questo [link](https://youtu.be/CY9y-l410AQ) si trova lo screencast che illustra i passaggi descritti di seguito.
 
