@@ -113,7 +113,14 @@ Posso far rileggere la configurazione al servizio?
 ```
 # systemctl reload sshd.service
 ```
-Usando l'opzione **reload** faccio rileggere la configurazione senza il bisogno di far ripartire completamente il servizio
+Usando l'opzione **reload** faccio rileggere la configurazione senza il bisogno di far ripartire completamente il servizio, ma attenzione *non tutti i servizi supportano l'opzione reload*
+Possiamo anche usufruire di un opzione comoda *systemctl reload-or-restart*, in pratica passando questa opzione proverà a fare il reload se il servizio lo supporta altrimenti farà il restart
+
+```
+# systemctl reload-or-restart sshd.service
+```
+
+Come posso fare se invece voglio eseguire direttamente il restart del servizio?
 
 ```
 # systemctl restart sshd.service
