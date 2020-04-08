@@ -94,10 +94,10 @@ Dopo l'installazione sarà necessario registrare il sistema col Red Hat Customer
 
 ![rhdev-08](img/subscribe-rhdev-08.PNG)
 
-- Scrivere il seguente comando e premere Invio, sostituendo ad *EMAIL* l'indirizzo email con cui è stata effettuata l'iscrizione e a *PASSWORD* la password selezionata, durante l'iscrizione effettuata al [passo 1](#1-iscrizione-a-red-hat-developer)
+- Scrivere il seguente comando e premere Invio, sostituendo ad *RHID* l'[ID Red Hat](img/subscribe-rhdev-01.PNG) con cui è stata effettuata l'iscrizione e a *PASSWORD* la password selezionata, durante l'iscrizione effettuata al [passo 1](#1-iscrizione-a-red-hat-developer)
 
 ```bash
-subscription-manager register --username EMAIL --password PASSWORD
+subscription-manager register --username RHID --password PASSWORD
 ```
 
 ![rhdev-09](img/subscribe-rhdev-09.PNG)
