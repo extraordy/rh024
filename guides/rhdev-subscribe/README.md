@@ -1,10 +1,14 @@
 # Ottenere una sottoscrizione Red Hat Developer
 
-Per gli sviluppatori non è mai stato così facile ottenere Red Hat Enterprise Linux, grazie alla disponibilità della sottoscrizione gratuita Red Hat Developer. Riferimento all'[articolo originale](https://developers.redhat.com/articles/getting-red-hat-developer-subscription-what-rhel-users-need-know/) (inglese).
+> Per gli sviluppatori non è mai stato così facile ottenere Red Hat Enterprise Linux, grazie alla disponibilità della sottoscrizione gratuita Red Hat Developer. *(Riferimento all'[articolo originale](https://developers.redhat.com/articles/getting-red-hat-developer-subscription-what-rhel-users-need-know/), in inglese)*.
+
+Una sottoscrizione Red Hat Developer è gratuita, e necessaria per poter sfruttare appieno il software RHEL; di seguito viene illustrato come ottenerne una e come collegarla alla propria macchina virtuale.
 
 ## 1. Iscrizione a Red Hat Developer
 
 - Unirsi al programma Red Hat Developer registrandosi a questo [link](https://developers.redhat.com/register) per ottenere una sottoscrizione. Ciascun sistema che esegue Red Hat Enterprise Linux avrà bisogno di una sottoscrizione dedicata.
+
+**NOTA**: Se si possiede già un account aziendale sui servizi online di Red Hat, potrebbero sorgere dei problemi durante il [passo 4](#4-attivazione-della-sottoscrizione): in tal caso si consiglia di registrare comunque un account come appena spiegato, per poter godere di una sottoscrizione sviluppatore.
 
 - Una volta aperto il link, sarà visualizzato un modulo di registrazione; scegliete uno user name da associare al vostro account, contenente almeno cinque caratteri
 
@@ -74,7 +78,7 @@ Seguendo questa [guida](../vbox-install/README.md) installare la macchina virtua
 
 ![ack-02](img/acknowledgement-04.PNG)
 
-## 4. Attivazione della sottoscrizione
+## 4. Attivare la sottoscrizione
 
 Dopo l'installazione sarà necessario registrare il sistema col Red Hat Customer Portal. Questo collegherà il sistema installato alla sottoscrizione effettuata al [passo 1](#1-iscrizione-a-red-hat-developer), permettendo al sistema di scaricare software e aggiornamenti da Red Hat.
 
@@ -98,10 +102,44 @@ subscription-manager register --username EMAIL --password PASSWORD
 
 ![rhdev-09](img/subscribe-rhdev-09.PNG)
 
-- Infine, scrivete il seguente comando e premete Invio:
+- Infine, scrivete i seguenti comandi e premete Invio:
 
 ```bash
-subscription-manager attach
+subscription-manager refresh
+subscription-manager attach --auto
 ```
 
-Ora sarà possibile scaricare aggiornamenti e software direttamente da Red Hat.
+![rhdev-10](img/subscribe-rhdev-10.PNG)
+
+Se l'output dell'ultimo comando sarà `Status: Subscribed`, allora sarà possibile scaricare aggiornamenti e software direttamente da Red Hat.
+
+---
+
+Se al passo precedente si ottiene invece un errore simile a questo
+
+![rhdev-11](img/subscribe-rhdev-11.PNG)
+
+Provare ad eseguire il seguente comando (scrivere il seguente testo e premere Invio):
+
+```bash
+subscription-manager list --available
+```
+Se l'output è il seguente:
+
+```bash
+No available subscription pools to list
+```
+
+Allora non ci sono sottoscrizioni associate al proprio account; questo potrebbe essere dovuto alle politiche applicate ai gruppi di account aziendali, e questo caso specifico può essere risolto registrando un proprio account, come mostrato al [passo 1](#1-iscrizione-a-red-hat-developer).
+
+---
+
+- In caso di errore, provare ad eseguire i seguenti comandi, poi riprovare dai comandi mostrati dopo la schermata di login:
+
+```bash
+subscription-manager remove --all
+subscription-manager unregister
+subscription-manager clean
+```
+
+![rhdev-12](img/subscribe-rhdev-12.PNG)
