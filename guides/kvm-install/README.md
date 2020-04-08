@@ -9,39 +9,50 @@ La seguente procedura è stata testata Fedora 31, ma dovrebbe essere valida per 
 | student | student | utente normale |
 | root | redhat | amministratore |
 
+## Installazione automatica da script
+
+Consigliamo di utilizzare la seguente procedura per ottenere automaticamente e importare la macchina virtuale: saranno necessari 10GB di spazio libero sul disco, e un utente con permessi di amministratore.
+
+- Aprire un terminale ed effettuare il login con un utente che abbia i premessi di amministratore;
+
+- Scrivere il comando seguente e premere Invio:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/extraordy/rh024/master/guides/kvm-install/install_vm.sh | sudo sh
+```
+
+Se non si verificheranno errori, il download e l'importazione della macchina virtuale avranno avuto successo.
+
+---
+
+### Installazione manuale passo-passo
+
 ## 1. Download
 
 - Aprire un terminale ed effettuare il login con un utente che abbia i premessi di amministratore;
 
 - Scaricare il gruppo di pacchetti software per la virtualizzazione, tramite il seguente comando, a seconda della distribuzione GNU/Linux in uso:
 
-    - #### Fedora:
+    - #### CentOS / RHEL:
     ```bash
-    sudo yum install @virtualization
+    sudo yum install @virt virt-install virt-viewer virt-v2v
     ```
 
-**NOTA**: Il comando seguente scaricherà l'archivio dentro la cartella nella quale sarà eseguito.
+    - #### Fedora:
+    ```bash
+    sudo yum install @virtualization virt-install virt-viewer virt-v2v
+    ```
 
-- Scaricare l'archivio contenente i file della macchina virtuale da questo [link](https://drive.google.com/open?id=19id0zA-XKeTF_3_jm0taFeFhxNmcDo_N); è possibile utilizzare il seguente comando (se `wget` è installato sul vostro sistema):
-
-```bash
-wget "https://drive.google.com/open?id=19id0zA-XKeTF_3_jm0taFeFhxNmcDo_N" -O rh024.tar.gz
-```
-
-**NOTA**: Il comando riportato sopra non permette di scaricare il file: al momento stiamo lavorando per inserire nella guida una soluzione, nel frattempo potete seguire il [link](https://drive.google.com/open?id=19id0zA-XKeTF_3_jm0taFeFhxNmcDo_N) proposto sopra, oppure provare quanto consigliato [qui](https://github.com/extraordy/rh024/issues/6)
+- Scaricare l'archivio contenente i file della macchina virtuale da questo [link](https://docs.google.com/uc?export=download&id=1Vs_yrJzBbsgKzMKXtOPK3thvFptKJhBo);
 
 ## 2. Installazione
+
+**NOTA**: I seguenti comandi estrarranno dentro `/tmp` i file necessari all'importazione della macchina virtuale
 
 - Estrarre l'archivio scaricato (il pacchetto `tar` è un requisito):
 
 ```bash
-tar -xzf rh024.tar.gz RH024
-```
-
-- Copiare i file dei dischi virtuali nel pool di default:
-
-```bash
-cd RH024 && sudo mv *.qcow2 /var/lib/libvirt/images/
+tar -xzf rh024.tar.gz -C /tmp
 ```
 
 - Abilitare e avviare il servizio di virtualizzazione:
@@ -53,13 +64,14 @@ sudo systemctl start --now libvirtd
 
 ## 3. Importare la macchina virtuale
 
-- Importare la definizione della macchina virtuale dal file XML fornito:
+- Importare la macchina virtuale
 
 ```bash
-sudo virsh define --file rh024.xml
+virt-v2v -i libvirtxml -o libvirt -os default -n default /tmp/rh024.xml
 ```
 
-- Avviare il dominio definito:
+- Pulire i residui
+
 ```bash
-sudo virsh start RH024
+rm -f /tmp/RH024*.qcow2 /tmp/rh024.xml /tmp/rh024.tar.gz
 ```
