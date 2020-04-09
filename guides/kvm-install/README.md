@@ -75,3 +75,39 @@ virt-v2v -i libvirtxml -o libvirt -os default -n default /tmp/rh024.xml
 ```bash
 rm -f /tmp/RH024*.qcow2 /tmp/rh024.xml /tmp/rh024.tar.gz
 ```
+
+### Errore sul pool di archiviazione
+
+In caso di errore per impossibilità di trovare lo storage pool "default"
+
+```
+virt-v2v: error: internal error: invalid argument: cannot find libvirt pool 
+‘default’: Storage pool not found: no storage pool with matching name 
+'default'
+```
+
+sarà necessario definire lo storage pool "default" tramite i seguenti comandi.
+
+- Definire il pool di archiviazione:
+```bash
+sudo mkdir -p /var/lib/libvirt/images
+sudo virsh pool-define-as --name default --type dir --target /var/lib/libvirt/images
+```
+
+- Attivare l'avvio automatico e abilitarlo:
+
+```bash
+sudo virsh pool-autostart default && sudo virsh pool-start default
+```
+
+- Riprovare l'importazione della macchina virtuale col seguente comando:
+
+```bash
+sudo virt-v2v -i libvirtxml -o libvirt -os default -n default /tmp/rh024.xml
+```
+
+- Pulire i residui (lo script automatico termina l'esecuzione in caso di errore, quindi non avrà ancora pulito i residui):
+
+```bash
+sudo rm -f /tmp/RH024*.qcow2 /tmp/rh024.xml ./rh024.tar.gz
+```

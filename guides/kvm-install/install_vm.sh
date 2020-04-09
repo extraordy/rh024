@@ -44,6 +44,13 @@ tar xzvf ${MYPWD}/${MYTAR}
 
 checkexit "Impossibile aprire l'archivio"
 
+if ! (virsh pool-info ${KVMSTORAGEPOOL} &> /dev/null); then
+  mkdir -p /var/lib/libvirt/images
+  virsh pool-define-as --name ${KVMSTORAGEPOOL} --type dir --target /var/lib/libvirt/images
+  virsh pool-start ${KVMSTORAGEPOOL}
+  virsh pool-autostart ${KVMSTORAGEPOOL}
+fi
+
 popd > /dev/null 2>&1
 
 virt-v2v -i libvirtxml -o libvirt -os ${KVMSTORAGEPOOL} -n ${KVMNETWORK} ${MYPATH}/rh024.xml
