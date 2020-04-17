@@ -17,3 +17,12 @@ Nel caso non fosse possibile installare il software necessario per qualunque mot
 Puoi seguire comunque le lezioni dei nostri istruttori. 
 
 Le macchine virtuali **non sono indispensabili** per seguire il corso erogato.
+
+# Laboratori proposti
+
+I link seguenti raccolgono esercizi che Vi proponiamo per mettere a punto quanto gli istruttori hanno introdotto durante il corso:
+
+- [riga di comando](labs/cli.md)
+- [permessi](labs/permissions.md)
+- [NetworkManager CLI](labs/nmcli.md)
+- [SystemD](labs/systemd.md)
